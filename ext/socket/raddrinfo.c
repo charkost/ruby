@@ -19,9 +19,9 @@
 #  ifdef GETADDRINFO_EMU
 #    define GETADDRINFO_IMPL 0
 #  elif !defined(HAVE_PTHREAD_CREATE) || !defined(HAVE_PTHREAD_DETACH) || defined(__MINGW32__) || defined(__MINGW64__)
-#    define GETADDRINFO_IMPL 1
+#    define GETADDRINFO_IMPL 0
 #  else
-#    define GETADDRINFO_IMPL 2
+#    define GETADDRINFO_IMPL 0
 #    include "ruby/thread_native.h"
 #  endif
 #endif
